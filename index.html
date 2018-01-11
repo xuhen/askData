@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+
+  <title>askData test</title>
+  <style type="text/css">
+
+
+</style>
+</head>
+
+<body >
+
+
+
+  <script src="./askData.js"></script>
+  <script type="text/javascript">
+
+
+    askData.setContentType("application/json; charset=utf-8");
+
+    var params = {
+      name: "elon musk"
+    };
+
+    askData.delete('http://localhost:8090/api/bears/5a572eb0bdf646e2ecf546da')
+    .success(function (data) {
+      console.log(data);
+    })
+    .error(function (err) {
+      console.log(err);
+    });
+
+
+
+
+
+  </script>
+</body>
+
+</html>
+
+
+
