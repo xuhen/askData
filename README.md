@@ -2,6 +2,29 @@
 
 > NOTE: use to understand how ajax works, Do not use in production.
 > 
+> 
+
+## set up interceptor
+
+```
+	// askData interceptor
+    askData.ajaxSetup({
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('x-access-token', token);
+            xhr.setRequestHeader('Content-type', "application/json; charset=utf-8");
+        },
+        error : function(XHR) {
+     		console.log(XHR);
+            if (XHR.status === 401) {
+                
+            }
+        },
+        success: function (XHR) {
+            console.log(XHR);
+        }
+    });
+
+```
 
 ###使用
 * get
